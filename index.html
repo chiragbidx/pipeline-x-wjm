@@ -1,91 +1,414 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexora – Your Digital Agency Partner</title>
+    <meta name="description" content="Nexora is a full-service digital agency delivering innovative solutions to grow your business." />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
-    >
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+      /* Custom Styles */
+      .hero-section {
+        background: linear-gradient(90deg, #0053ba 0%, #00b4ff 100%);
+        color: #fff;
+        padding: 6rem 0 4rem;
+      }
+      .hero-section h1 {
+        font-weight: 700;
+        font-size: 2.75rem;
+        line-height: 1.2;
+      }
+      .hero-section p.lead {
+        font-size: 1.25rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+      }
+      .btn-primary:hover, .btn-primary:focus {
+        background-color: #0056b3;
+      }
+      .feature-icon {
+        font-size: 2.25rem;
+        color: #007bff;
+      }
+      .testimonial-card {
+        border: none;
+        background-color: #f8f9fa;
+        border-radius: 0.75rem;
+        padding: 2rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .testimonial-text {
+        font-style: italic;
+        margin-bottom: 1.25rem;
+      }
+      .testimonial-author {
+        font-weight: 600;
+      }
+      .faq-button {
+        width: 100%;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+      footer {
+        background-color: #212529;
+        color: #adb5bd;
+        padding: 3rem 0;
+      }
+      footer a {
+        color: #adb5bd;
+        text-decoration: none;
+      }
+      footer a:hover,
+      footer a:focus {
+        color: #fff;
+        text-decoration: underline;
+      }
+      .form-control:focus {
+        border-color: #007bff;
+        box-shadow: none;
+      }
+      .section-spacing {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+    </style>
   </head>
-
   <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Main navigation">
       <div class="container">
-        <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <a class="navbar-brand" href="#" aria-label="Nexora Home">Nexora</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Dropdown</a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-            <li class="nav-item"><a class="nav-link disabled">Disabled</a></li>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
 
-    <div class="container my-5">
-      <h1>Hello, world!</h1>
-      <div class="col-lg-8 px-0">
-        <p class="fs-5">
-          You've successfully loaded up the Bootstrap starter example.
-        </p>
-        <p>Feel free to download or copy-and-paste any parts of this example.</p>
+    <main>
+      <section id="hero" class="hero-section text-center text-md-start">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md-6">
+              <h1>Your Digital Agency Partner</h1>
+              <p class="lead">We create innovative digital experiences that drive success for your business.</p>
+              <a href="#contact" class="btn btn-primary btn-lg" role="button" aria-label="Contact Nexora now">Get Started</a>
+            </div>
+            <div class="col-md-5 d-none d-md-block">
+              <img src="https://pixabay.com/get/g65d177c83646f5ef4fd4c7e196c3efea432d6c5026ff24040c2af2cff7e3649f7258fdfe327a89ceb7b8092c88eb6932c8989cf8f62b76e75660a00f647ee3de_640.jpg" alt="Agency team working together" class="img-fluid rounded shadow" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <hr class="col-1 my-4">
+      <section id="services" class="section-spacing">
+        <div class="container">
+          <h2 class="text-center mb-5">Our Services</h2>
+          <div class="row g-4">
+            <div class="col-md-4 text-center">
+              <div class="mb-3">
+                <span class="feature-icon" aria-hidden="true">&#128187;</span>
+              </div>
+              <h3>Web Development</h3>
+              <p>Building responsive, modern websites with cutting-edge technology to help your business grow.</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="mb-3">
+                <span class="feature-icon" aria-hidden="true">&#128241;</span>
+              </div>
+              <h3>Mobile Apps</h3>
+              <p>Creating seamless mobile applications for both iOS and Android platforms tailored to your needs.</p>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="mb-3">
+                <span class="feature-icon" aria-hidden="true">&#128200;</span>
+              </div>
+              <h3>Digital Marketing</h3>
+              <p>Driving traffic and engagement through optimized marketing strategies and campaigns.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <a href="https://getbootstrap.com" class="btn btn-primary">Read the Bootstrap docs</a>
-        <a href="https://github.com/twbs/examples" class="btn btn-secondary">View on GitHub</a>
+      <section id="about" class="bg-light section-spacing">
+        <div class="container">
+          <h2 class="text-center mb-5">About Nexora</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Nexora is a forward-thinking digital agency committed to turning ideas into reality through exceptional digital products and strategies. With a passion for innovation and client success, we deliver tailored web and mobile solutions combined with effective marketing to elevate brands.
+              </p>
+              <p>
+                Our experienced team works closely with you to understand your business goals and craft customized strategies that deliver measurable results. Trust Nexora to be your partner in navigating the digital landscape.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section-spacing">
+        <div class="container">
+          <h2 class="text-center mb-5">What Our Clients Say</h2>
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+              <div class="testimonial-card shadow-sm">
+                <p class="testimonial-text">"Nexora transformed our online presence and helped us increase conversions by 40%. A truly professional team."</p>
+                <p class="testimonial-author">— Jamie L., CEO of BrightCo</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="testimonial-card shadow-sm">
+                <p class="testimonial-text">"The mobile app delivered was exceptional. Great communication and timely delivery. Highly recommend."</p>
+                <p class="testimonial-author">— Priya M., Founder of FitTrack</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="testimonial-card shadow-sm">
+                <p class="testimonial-text">"Their digital marketing expertise helped us boost engagement and brand awareness quickly."</p>
+                <p class="testimonial-author">— Marcus T., Marketing Lead at Marketify</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="bg-light section-spacing">
+        <div class="container">
+          <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+          <div class="accordion" id="faqAccordion" role="region" aria-label="Frequently Asked Questions">
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqHeadingOne">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseOne"
+                  aria-expanded="true"
+                  aria-controls="faqCollapseOne"
+                >
+                  What industries do you specialize in?
+                </button>
+              </h3>
+              <div
+                id="faqCollapseOne"
+                class="accordion-collapse collapse show"
+                aria-labelledby="faqHeadingOne"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  We work across various industries including tech, healthcare, retail, and finance, tailoring solutions to each client’s unique needs.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqHeadingTwo">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseTwo"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseTwo"
+                >
+                  How long does a typical project take?
+                </button>
+              </h3>
+              <div
+                id="faqCollapseTwo"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqHeadingTwo"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Project timelines vary depending on scope but typically range from a few weeks to several months. We’ll provide a detailed timeline during the proposal.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header" id="faqHeadingThree">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faqCollapseThree"
+                  aria-expanded="false"
+                  aria-controls="faqCollapseThree"
+                >
+                  Do you provide ongoing support and maintenance?
+                </button>
+              </h3>
+              <div
+                id="faqCollapseThree"
+                class="accordion-collapse collapse"
+                aria-labelledby="faqHeadingThree"
+                data-bs-parent="#faqAccordion"
+              >
+                <div class="accordion-body">
+                  Yes, we offer flexible post-launch support packages to keep your website and apps running smoothly.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section-spacing">
+        <div class="container">
+          <h2 class="text-center mb-5">Contact Nexora</h2>
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <form id="contactForm" novalidate>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Your full name"
+                    required
+                    aria-required="true"
+                  />
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="your.email@example.com"
+                    required
+                    aria-required="true"
+                  />
+                  <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number (optional)</label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="+1 555 123 4567" />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Your message here..."
+                    required
+                    aria-required="true"
+                  ></textarea>
+                  <div class="invalid-feedback">Please enter your message.</div>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" aria-label="Submit contact form">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-primary text-white text-center py-5">
+        <div class="container">
+          <h2>Ready to grow your business?</h2>
+          <p class="lead mb-4">Partner with Nexora for innovative digital solutions that deliver results.</p>
+          <a href="#contact" class="btn btn-light btn-lg" role="button" aria-label="Contact Nexora now">
+            Get a Free Consultation
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="row justify-content-between align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <p class="mb-0">&copy; 2024 Nexora. All rights reserved.</p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <a href="mailto:hi@chirag.co" aria-label="Email Nexora">hi@chirag.co</a> | <a href="tel:" aria-label="Call Nexora">Contact</a>
+          </div>
+        </div>
       </div>
-    </div>
+    </footer>
 
- 
-        <!--
-          PANDA ELEMENT SELECTION SCRIPT
-          ===============================
-          Captures all element clicks inside the iframe and sends metadata to Bubble via postMessage.
-          Metadata captured: url, width, height, alt
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        -->
-        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-qNJfymA6zeK6U74/cgDxS01lnu6RJOtF/ScptD3Iq5oMZSZ2isGZejRoGTzjJFHK" crossorigin="anonymous"></script>
+    <script>
+      (() => {
+        const form = document.getElementById("contactForm");
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          if (!form.checkValidity()) {
+            e.stopPropagation();
+            form.classList.add("was-validated");
+            return;
+          }
+          // Here you can implement email sending logic or integration
+          alert("Thank you for contacting Nexora! We'll get back to you shortly.");
+          form.reset();
+          form.classList.remove("was-validated");
+        });
+      })();
+    </script>
 
-        <!--
-          PANDA BRANDING SCRIPT
-          ====================
-          Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        -->
-        <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js" defer></script>
-        <!--
-          PANDA AUTO RELOAD SCRIPT
-          ====================
-          Handles Panda HMR solution built on railway to hot reload changes in preview.
-            ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
-        -->
-        <script>
-        const es = new EventSource("/__hmr");
-        es.onmessage = () => location.reload();
-        </script>
+    <!--
+      PANDA ELEMENT SELECTION SCRIPT
+      ===============================
+      Captures all element clicks inside the iframe and sends metadata to Bubble via postMessage.
+      Metadata captured: url, width, height, alt
+        ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+    -->
+    <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-element-selection.js" defer></script>
 
+    <!--
+      PANDA BRANDING SCRIPT
+      ====================
+      Handles Panda-specific branding, logos, placeholders, and runtime injection for the iframe/editor.
+        ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+    -->
+    <script src="https://bfwqdadlcyndtaqmqtci.supabase.co/storage/v1/object/public/pandajs/panda-branding.js" defer></script>
 
+    <!--
+      PANDA AUTO RELOAD SCRIPT
+      ====================
+      Handles Panda HMR solution built on railway to hot reload changes in preview.
+        ⚠ Do NOT remove or modify this script unless explicitly instructed by the admin.
+    -->
+    <script>
+      const es = new EventSource("/__hmr");
+      es.onmessage = () => location.reload();
+    </script>
   </body>
 </html>
